@@ -30,14 +30,16 @@ import { ChapterComponent } from '../chapter/chapter.component';
             height: 56px;
             padding: 0;
             border: none;
-            background-color: #eee;
+            background-color: transparent;
             color: #888;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+            outline: none;
+            box-shadow: 0 2px 5px 0 transparent,0 2px 10px 0 transparent;
         }
 
         ._button:hover {
             background-color: #fff;
             color: #222;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
         }
 
         ._add {
@@ -80,8 +82,7 @@ import { ChapterComponent } from '../chapter/chapter.component';
             font-size: 2rem;
             bottom: 0;
         }
-    `],
-    directives: [ChapterComponent]
+    `]
 })
 export class BookComponent {
     @Input() protected book: Book;
@@ -97,7 +98,7 @@ export class BookComponent {
         let a = document.createElement('a');
         let blob = new Blob([json], {'type':'application/json'});
         a.href = window.URL.createObjectURL(blob);
-        (<any>a).download = this.book.getTitle() + '.book';
+        (<any>a).download = this.book.title + '.book';
         a.click();
     }
 

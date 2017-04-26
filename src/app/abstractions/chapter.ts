@@ -1,8 +1,8 @@
 import { Page } from './page';
 
 export class Chapter {
-    private pages: Page[] = [];
-    private index: number;
+    public pages: Page[] = [];
+    public index: number;
 
     constructor() {
         this.addPage(); // Start with one page
@@ -15,19 +15,7 @@ export class Chapter {
         this.pages.push(page);
     }
 
-    public setIndex(index: number): void {
-        this.index = index;
-    }
-
-    public getIndex(): number {
-        return this.index;
-    }
-
     public getNumberOfPages(): number {
         return this.pages.length;
-    }
-
-    public getPages(): Page[] {
-        return this.pages;
     }
 }

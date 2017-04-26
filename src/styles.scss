@@ -1,0 +1,21 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Vollkorn', serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    height: 650px;
+    width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+}

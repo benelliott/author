@@ -27,8 +27,7 @@ import { Page } from '../../abstractions/page';
     ._chapter-number {
         font-size: 12rem;
     }
-    `],
-    directives: [PageComponent]
+    `]
 })
 export class ChapterComponent {
     @Input() protected chapter: Chapter;

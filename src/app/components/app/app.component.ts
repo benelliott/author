@@ -5,7 +5,7 @@ import { Page } from '../../abstractions/page';
 import { BookComponent } from '../book/book.component'; 
 
 @Component({
-    selector: 'bge-app',
+    selector: 'bge-author-app',
     template: `
         <div class="_content">
             <bge-book [book]="book"></bge-book>
@@ -27,8 +27,7 @@ import { BookComponent } from '../book/book.component';
         background-color: transparent;
     }
     
-    `],
-    directives: [BookComponent]
+    `]
 })
 export class AppComponent implements OnInit {
     protected book: Book;
