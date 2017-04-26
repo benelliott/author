@@ -1,0 +1,13 @@
+<div class="_cover page" (click)="changeCoverColour($event)" [style.background-color]="coverColour">
+    <textarea class="_title" type="text" [(ngModel)]="book.title" (click)="$event.stopPropagation()"></textarea>
+    <textarea class="_author" type="text" [(ngModel)]="book.author" (click)="$event.stopPropagation()"></textarea>
+</div>
+<div class="_chapters">
+    <bge-chapter *ngFor="let chapter of book.chapters" [chapter]="chapter"></bge-chapter>
+</div>
+<button class="_button _add" title="Add chapter" (click)="addChapter($event)">
+    <i class="material-icons">add</i>
+</button>
+<button class="_button _download" title="Download" (click)="download($event)">
+    <i class="material-icons">file_download</i>
+</button>

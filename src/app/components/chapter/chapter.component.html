@@ -1,0 +1,2 @@
+<div class="_page _chapter-start page"><span class="_chapter-number">{{chapter.index}}</span></div>
+<bge-page class="_page" *ngFor="let page of chapter.pages" [page]="page" (onPageEnd)="onPageEnd($event)"></bge-page>

@@ -5,29 +5,8 @@ import { Page } from '../../abstractions/page';
 
 @Component({
     selector: 'bge-chapter',
-    template: `
-    <div class="_page _chapter-start page"><span class="_chapter-number">{{chapter.index}}</span></div>
-    <bge-page class="_page" *ngFor="let page of chapter.pages" [page]="page" (onPageEnd)="onPageEnd($event)"></bge-page>
-    `,
-    styles: [`
-    :host {
-        display: block;
-    }
-
-    ._page {
-        margin-top: 1rem;
-    }
-
-    ._chapter-start {
-        background-color: #fff;
-        text-align: right;
-        padding: 2rem;
-    }
-
-    ._chapter-number {
-        font-size: 12rem;
-    }
-    `]
+    templateUrl: './chapter.component.html',
+    styleUrls: ['./chapter.component.scss']
 })
 export class ChapterComponent {
     @Input() protected chapter: Chapter;
